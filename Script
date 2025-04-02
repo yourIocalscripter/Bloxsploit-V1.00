@@ -1,3 +1,20 @@
+local CoreGuiService = game:GetService("CoreGui")
+local NotificationService = game:GetService("StarterGui"):GetCoreGuiService()
+
+NotificationService:SendNotification({
+	Title = "welcom to my awesome execturo",
+	Text = "go check out boomta4 he's the creatr of this",
+	Duration = 5,
+	Icon = "rbxassetid://1234567890"
+})
+
+NotificationService:SendNotification({
+	Title = "unc is kinda low",
+	Text = "unc is 63% as if now but the executr itself is relly good",
+	Duration = 5,
+	Icon = "rbxassetid://1234567890"
+})
+
 local screengui = Instance.new("ScreenGui")
 screengui.Parent = game.Players.LocalPlayer.PlayerGui
 screengui.ResetOnSpawn = false
