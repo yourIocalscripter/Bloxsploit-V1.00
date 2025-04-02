@@ -1,0 +1,83 @@
+local screengui = Instance.new("ScreenGui")
+screengui.Parent = game.Players.LocalPlayer.PlayerGui
+screengui.ResetOnSpawn = false
+
+local frame = Instance.new("Frame")
+frame.Parent =  screengui
+frame.Size = UDim2.new(0, 300, 0, 150)
+frame.Position =  UDim2.new(0, 0, 0) 
+frame.BackgroundColor = BrickColor.new("Black")
+
+local uicorner =  Instance.new("UICorner")
+uicorner.Parent =  frame
+uicorner.CornerRadius = UDim.new(0, 8)
+
+local uigradient =  Instance.new("UIGradient")
+uigradient.Parent =  frame
+uigradient.Rotation =  90
+uigradient.Transparency =  NumberSequence.new(0, 0.8)
+
+local uidragdetector =  Instance.new("UIDragDetector")
+uidragdetector.Parent =  frame
+
+local title = Instance.new("TextLabel")
+title.Text = "--- BLOXSPLOIT BETA. ---"
+title.Parent = frame
+title.Size = UDim2.new(1, 0, 0, 30)
+title.BackgroundTransparency = 1
+title.TextColor = BrickColor.new("White")
+title.Font = Enum.Font.PatrickHand
+title.TextSize = 20
+
+local uigradient2 =  Instance.new("UIGradient")
+uigradient2.Parent =  title
+uigradient2.Rotation =  90
+uigradient2.Transparency =  NumberSequence.new(0, 0.5)
+
+local uipadding =  Instance.new("UIPadding")
+uipadding.Parent =  title
+uipadding.PaddingTop =  UDim.new(0, -20)
+
+local container = Instance.new("TextBox")
+container.BackgroundColor = BrickColor.new("Black")
+container.PlaceholderText = "YOUR SCRIPT."
+container.Font = Enum.Font.PatrickHand
+container.Size =  UDim2.new(0.8, 0, 0, 80)
+container.Parent =  frame
+container.Position = UDim2.new(0.1, 0, 0.1, 0)
+container.TextColor = BrickColor.new("White")
+container.TextSize = 25
+container.TextScaled = false
+container.ClearTextOnFocus = false
+container.Text = ""
+container.MultiLine = true
+
+local uigradient3 =  Instance.new("UIGradient")
+uigradient3.Parent =  container
+uigradient3.Rotation =  90
+uigradient3.Transparency =  NumberSequence.new(0, 0.5)
+
+local uicorner2 =  Instance.new("UICorner")
+uicorner2.Parent =  container
+uicorner2.CornerRadius = UDim.new(0, 8)
+
+local button = Instance.new("TextButton")
+button.BackgroundColor = BrickColor.new("Black")
+button.Parent = frame
+button.Size =  UDim2.new(0.8, 0, 0.2, 0)
+button.Position = UDim2.new(0.1, 0, 0.7, 0)
+button.Text = "Execute"
+button.TextColor = BrickColor.new("White")
+button.Font = Enum.Font.PatrickHand
+button.TextSize = 25
+
+local uicorner3 =  Instance.new("UICorner")
+uicorner3.Parent =  button
+uicorner3.CornerRadius = UDim.new(0, 8)
+
+-- Technical stuff...
+button.MouseButton1Click:Connect(function()
+	if container.Text ~= "" then
+		loadstring(container.Text)()
+	end
+end)
