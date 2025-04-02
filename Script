@@ -1,7 +1,5 @@
 local StarterGui = game:GetService("StarterGui")
 
-StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Notifications, true)
-
 StarterGui:SetCore("SendNotification", {
 	Title = "NOTICE",
 	Text = "executor is not finshed thank you",
